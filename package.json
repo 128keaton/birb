@@ -1,0 +1,42 @@
+{
+  "name": "birb",
+  "version": "0.0.1",
+  "description": "Typescript-based Twitter API wrapper, with magic",
+  "main": "dist/birb.js",
+  "scripts": {
+    "clean": "rm -rf dist && mkdir dist",
+    "build": "npm run clean && tsc",
+    "test": "jest --config=jest.config.js",
+    "prepublish": "npm test",
+    "coveralls": "jest --coverage && cat ./test/coverage/lcov.info | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/128keaton/birb.git"
+  },
+  "keywords": [
+    "birb",
+    "twitter",
+    "api",
+    "typescript"
+  ],
+  "author": "Keaton Burleson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/128keaton/birb/issues"
+  },
+  "homepage": "https://github.com/128keaton/birb#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "twitter-lite": "^0.9.4"
+  }
+}
